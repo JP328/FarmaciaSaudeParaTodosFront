@@ -7,6 +7,7 @@ function Navbar() {
       <nav className="w-1/3 flex justify-around">
         <Link to='/' >Produtos</Link>
         <Link to='/categorias' >Categorias</Link>
+        <Link to='/cadastroCategoria' >Cadastrar Categoria</Link>
       </nav>
     </div>
   )

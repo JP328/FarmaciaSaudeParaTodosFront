@@ -6,7 +6,10 @@ function Home() {
       <div className="w-full h-screen bg-DoctorBackground bg-cover bg-no-repeat">
         <div className="w-full h-full bg-red-500/40 flex flex-col justify-center items-center">
           <h1 className="text-6xl text-white font-bold">Bem vindos a Farmácia Saude pra todos!</h1>
-          <Link to='/cadastroCategoria' className="border border-white p-4 text-white text-lg mt-10">Cadastrar Categoria</Link>
+          <Link 
+            to='/cadastroCategoria' 
+            className="border border-white p-3 text-white text-lg mt-10 hover:text-xl transition-all">Cadastrar Categoria
+          </Link>
         </div>
       </div>
 
