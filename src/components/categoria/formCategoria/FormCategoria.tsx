@@ -19,7 +19,7 @@ function FormCategoria() {
 
   async function buscarPorId(id: string) {
     try {
-        await buscar(`/categoria/${id}`, setCategoria)
+        await buscar(`/categorias/${id}`, setCategoria)
     } catch (error: any) {
         alert('Ocorreu um erro!')
     }
@@ -44,7 +44,7 @@ function FormCategoria() {
 
     if (id !== undefined) {
         try {
-            await atualizar(`/categoria`, categoria, setCategoria)
+            await atualizar(`/categorias`, categoria, setCategoria)
             alert('Categoria atualizado com sucesso')
         } catch (error: any) {
           alert('Ocorreu um erro!')
@@ -52,7 +52,7 @@ function FormCategoria() {
 
     } else {
         try {
-          await cadastrar(`/categoria`, categoria, setCategoria)
+          await cadastrar(`/categorias`, categoria, setCategoria)
 
           alert('Categoria cadastrado com sucesso')
 
@@ -70,19 +70,19 @@ function FormCategoria() {
   }
   
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
+    <div className="h-screen bg-redBackground bg-cover bg-no-repeat flex flex-col items-center justify-center text-white font-bold">
         <h1 className="text-4xl text-center my-8">
             {id === undefined ? 'Cadastrar categoria' : 'Editar categoria'}
         </h1>
 
         <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovocategoria}>
           <div className="flex flex-col gap-2">
-              <label htmlFor="nome">Descrição do categoria</label>
+              <label htmlFor="nome">Descrição da categoria</label>
               <input
                   type="text"
-                  placeholder="Descreva aqui seu categoria"
+                  placeholder="Descreva aqui sua categoria"
                   name='nome'
-                  className="border-2 border-slate-700 rounded p-2"
+                  className="border-2 border-slate-700 rounded p-2 text-slate-900"
                   value={categoria.nome}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
               />
